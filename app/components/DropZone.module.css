@@ -1,0 +1,62 @@
+.dropzoneContainer {
+  width: 100%;
+}
+
+.dropzone {
+  border: 2px dashed var(--text-secondary-color);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s;
+  cursor: pointer;
+  color: var(--text-secondary-color);
+}
+
+.dropzone:hover {
+  border-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+.dropzone.active {
+  border-color: var(--primary-color);
+  background-color: rgba(98, 0, 234, 0.1);
+}
+
+.dropzone.error {
+  border-color: var(--error-color);
+}
+
+.supportedFormats {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  opacity: 0.7;
+}
+
+.fileInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fileName {
+  font-weight: bold;
+  color: var(--text-color);
+  word-break: break-all;
+}
+
+.fileSize {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.errorMessage {
+  color: var(--error-color);
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .dropzone {
+    padding: 1.5rem 1rem;
+  }
+} 

@@ -1,0 +1,35 @@
+.progressContainer {
+  width: 100%;
+  margin: 1rem 0;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.progressText {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.progressBarContainer {
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progressBar {
+  height: 100%;
+  background: linear-gradient(45deg, var(--primary-color), var(--success-color));
+  border-radius: 4px;
+  transition: width 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+} 

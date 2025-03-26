@@ -1,0 +1,225 @@
+.audioPlayer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  padding: 1rem;
+  gap: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+[data-theme="dark"] .audioPlayer {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.mainControls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.playButton {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  transition: background-color 0.3s, transform 0.2s;
+  flex-shrink: 0;
+}
+
+.playButton:hover:not(:disabled) {
+  background-color: var(--secondary-color);
+  transform: scale(1.05);
+}
+
+.playButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.skipButton {
+  background-color: rgba(98, 0, 234, 0.1);
+  color: var(--text-color);
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.skipButton:hover {
+  background-color: rgba(98, 0, 234, 0.2);
+}
+
+.progressArea {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.progressContainer {
+  flex-grow: 1;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+[data-theme="light"] .progressContainer {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.progressBar {
+  height: 100%;
+  background-color: var(--primary-color);
+  border-radius: 3px;
+  transition: width 0.1s linear;
+}
+
+.time {
+  font-size: 0.8rem;
+  color: var(--text-secondary-color);
+  min-width: 40px;
+}
+
+.secondaryControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.volumeControl {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.muteButton {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.muteButton:hover {
+  opacity: 0.8;
+}
+
+.volumeSlider {
+  width: 80px;
+  height: 5px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  outline: none;
+}
+
+[data-theme="light"] .volumeSlider {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.volumeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.volumeSlider::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+.playbackControl {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.playbackLabel {
+  font-size: 0.9rem;
+  color: var(--text-secondary-color);
+}
+
+.playbackButtons {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.playbackButton {
+  background: none;
+  border: 1px solid var(--text-secondary-color);
+  border-radius: 4px;
+  color: var(--text-secondary-color);
+  font-size: 0.8rem;
+  padding: 0.25rem 0.5rem;
+  transition: all 0.3s;
+}
+
+.playbackButton:hover {
+  background-color: rgba(98, 0, 234, 0.1);
+  border-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+.playbackButton.activeRate {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+}
+
+.error {
+  color: var(--error-color);
+  text-align: center;
+  padding: 1rem;
+  background-color: rgba(207, 102, 121, 0.1);
+  border-radius: 8px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .audioPlayer {
+    padding: 0.75rem;
+  }
+  
+  .playButton {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+  
+  .secondaryControls {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .playbackButtons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+  }
+}
