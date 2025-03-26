@@ -6,3 +6,4 @@ pretrained_models
 test_output
 transformed
 uploads
+genre-remix
