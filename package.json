@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "./build.sh",
     "start": "next start"
   },
   "keywords": [],
