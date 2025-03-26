@@ -26,7 +26,7 @@ export async function transformAudio(
     console.log(stdout);
     console.log('------ END PYTHON OUTPUT ------');
 
-    if (stderr && stderr.trim().length > 0) {
+    if (stderr && typeof stderr === 'string' && stderr.trim().length > 0) {
       console.log('------ START PYTHON ERRORS ------');
       console.error(stderr);
       console.log('------ END PYTHON ERRORS ------');
