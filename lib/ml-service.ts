@@ -1,3 +1,7 @@
+import * as fs from 'fs/promises';
+import * as path from 'path';
+import { exec as execPromise } from 'child_process';
+
 const USE_MAGENTA = true; // Toggle between Magenta and Spleeter transformations
 
 export async function transformAudio(
@@ -42,4 +46,4 @@ export async function transformAudio(
       throw copyError;
     }
   }
-} 
+}
