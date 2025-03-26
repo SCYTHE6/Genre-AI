@@ -1,4 +1,4 @@
-// File: C:\Github\Genre-Remix\app\api\test-upload\route.ts
+// File: C:\Github\Genre-AI\app\api\test-upload\route.ts
 import * as entry from '../../../../../app/api/test-upload/route.js'
 import type { NextRequest } from 'next/server.js'
 

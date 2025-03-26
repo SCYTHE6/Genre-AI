@@ -1,1 +1,8 @@
-node_modules/
+.vercelignore.txt
+.next
+venv
+node_modules
+pretrained_models
+test_output
+transformed
+uploads
